@@ -1,0 +1,32 @@
+﻿@model IEnumerable<HotelBookingSystem.Models.Hotel>
+
+@{
+    ViewData["Title"] = "酒店管理";
+}
+
+<h1>酒店管理</h1>
+<a href="/HotelView/Create">添加新酒店</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>城市</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotel in Model)
+        {
+            <tr>
+                <td>@hotel.Id</td>
+                <td>@hotel.Name</td>
+                <td>@hotel.City</td>
+                <td>
+                    <a href="/HotelView/Edit/@hotel.Id">编辑</a> |
+                    <a href="/HotelView/Delete/@hotel.Id">删除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model HotelBookingSystem.Models.Hotel
+
+@{
+    ViewData["Title"] = "添加新酒店";
+}
+
+<h1>添加新酒店</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <!-- 添加其他字段 -->
+    <button type="submit" class="btn btn-primary">保存</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

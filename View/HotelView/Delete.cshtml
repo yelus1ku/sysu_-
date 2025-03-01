@@ -1,0 +1,35 @@
+﻿@model HotelBookingSystem.Models.Hotel
+
+@{
+    ViewData["Title"] = "删除酒店";
+}
+
+<h1>删除酒店</h1>
+
+<div>
+    <h4>您确定要删除以下酒店吗？</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>编号 (ID)</dt>
+        <dd>@Model.Id</dd>
+
+        <dt>名称</dt>
+        <dd>@Model.Name</dd>
+
+        <dt>地址</dt>
+        <dd>@Model.Address</dd>
+
+        <dt>城市</dt>
+        <dd>@Model.City</dd>
+
+        <!-- 视需要可添加更多字段显示 -->
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <!-- 隐藏字段：用于传递主键ID -->
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">删除</button>
+    <a asp-action="Index" class="btn btn-secondary">取消</a>
+</form>

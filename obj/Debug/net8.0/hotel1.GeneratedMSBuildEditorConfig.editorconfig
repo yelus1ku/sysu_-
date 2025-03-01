@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = hotel1
+build_property.RootNamespace = hotel1
+build_property.ProjectDir = E:\database\final\hotel1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\database\final\hotel1
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/database/final/hotel1/View/HotelView/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xIb3RlbFZpZXdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/database/final/hotel1/View/HotelView/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xIb3RlbFZpZXdcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/database/final/hotel1/View/HotelView/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xIb3RlbFZpZXdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/database/final/hotel1/View/HotelView/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld1xIb3RlbFZpZXdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
