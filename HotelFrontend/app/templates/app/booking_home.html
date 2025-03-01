@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<html>
+<head>
+    <title>Booking Management</title>
+    <style>
+        .management-buttons {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+            .management-buttons .btn {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px 30px;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+                background-color: #28a745;
+                border: 1px solid #28a745;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .management-buttons .btn:hover {
+                    background-color: #218838;
+                }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Booking Management</h1>
+    <div class="management-buttons">
+        <a href="{% url 'create_booking' %}" class="btn">Create Booking</a>
+        <a href="{% url 'delete_booking' %}" class="btn">Delete Booking</a>
+        <a href="{% url 'view_booking' %}" class="btn">View Booking</a>
+        <a href="{% url 'update_booking' %}" class="btn">Update Booking</a>
+        <a href="{% url 'all_bookings' %}" class="btn">All Bookings</a>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .management-buttons {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+            .management-buttons .btn {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px 30px;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+                background-color: #28a745;
+                border: 1px solid #28a745;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .management-buttons .btn:hover {
+                    background-color: #218838;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Hotel Management System</h1>
+        <div class="management-buttons">
+            <a href="{% url 'booking_home' %}" class="btn">预订管理</a>
+            <a href="{% url 'room_home' %}" class="btn">房间管理</a>
+            <a href="{% url 'hotel_home' %}" class="btn">酒店管理</a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

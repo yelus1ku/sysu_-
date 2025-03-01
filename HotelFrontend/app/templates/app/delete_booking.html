@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+
+{% block content %}
+<headr>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Booking</title>
+</headr>
+<tbody>
+    <h1>Delete Booking by Room Number</h1>
+    <form method="post" action="{% url 'delete_booking' %}">
+        {% csrf_token %}
+        <label for="roomNumber">Room Number:</label>
+        <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter room number" required>
+        <br><br>
+        <button type="submit">Delete Booking</button>
+    </form>
+
+    {% if message %}
+    <p style="color: green;">{{ message }}</p>
+    {% elif error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</tbody>
+{% endblock %}

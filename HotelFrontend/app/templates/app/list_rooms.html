@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+{% block title %}Available Rooms{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Rooms List</h1>
+</header>
+
+<main>
+    {% if rooms %}
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
+        <thead>
+            <tr>
+                <th style="padding: 10px;">Room Number</th>
+                <th style="padding: 10px;">Room Type</th>
+                <th style="padding: 10px;">Room Price</th>
+                <th style="padding: 10px;">Status</th>
+                <th style="padding: 10px;">Hotel Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for room in rooms %}
+            <tr>
+                <td style="padding: 10px;">{{ room.roomNumber }}</td>
+                <td style="padding: 10px;">{{ room.roomType }}</td>
+                <td style="padding: 10px;">{{ room.roomPrice }}</td>
+                <td style="padding: 10px;">{{ room.status }}</td>
+                <td style="padding: 10px;">{{ room.hotelName }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No rooms available.</p>
+    {% endif %}
+</main>
+{% endblock %}

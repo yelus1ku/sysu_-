@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Room Management</title>
+    <style>
+        .management-buttons {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+            .management-buttons .btn {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px 30px;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+                background-color: #28a745;
+                border: 1px solid #28a745;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .management-buttons .btn:hover {
+                    background-color: #218838;
+                }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Room Management</h1>
+    <div class="management-buttons">
+        <a href="{% url 'list_rooms' %}" class="btn">List All Rooms</a>
+        <a href="{% url 'update_room' %}" class="btn">Update Room Information</a>
+        <a href="{% url 'view_room' %}" class="btn">View Specific Room</a>
+        <a href="{% url 'available_rooms' %}" class="btn">List Available Rooms</a>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<headr>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Room Information</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</headr>
+<tbody>
+    <div class="container">
+        <h1>View Room Information</h1>
+
+        <!-- 查询房间号的表单 -->
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="roomNumber">Room Number:</label>
+                <input type="text" id="roomNumber" name="roomNumber" required>
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+
+        <!-- 显示错误信息 -->
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% else %}
+        <p class="info">Enter a room number to search for details.</p>
+        {% endif %}
+
+        <!-- 显示房间信息 -->
+        {% if room %}
+        <div class="room-info">
+            <h2>Room Details</h2>
+            <p><strong>Room Number:</strong> {{ room.roomNumber }}</p>
+            <p><strong>Room Type:</strong> {{ room.roomType }}</p>
+            <p><strong>Room Price:</strong> ${{ room.roomPrice }}</p>
+            <p><strong>Status:</strong> {{ room.status }}</p>
+            <p><strong>Occupant Name:</strong> {{ room.occupantName }}</p>
+            <p><strong>Occupant Phone:</strong> {{ room.occupantPhone }}</p>
+            <p><strong>Check-In Date:</strong> {{ room.checkInDate }}</p>
+            <p><strong>Expected Check-Out Date:</strong> {{ room.expectedCheckOutDate }}</p>
+        </div>
+        {% endif %}
+    </div>
+</tbody>
+{% endblock %}

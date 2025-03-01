@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+
+
+{% block content %}
+<headr>
+    <title>Hotel List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</headr>
+<tbody>
+    <h1>Hotel List</h1>
+
+    {% if hotels %}
+    <table>
+        <thead>
+            <tr>
+                <th>Hotel Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Total Rooms</th>
+                <th>Available Rooms</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for hotel in hotels %}
+            <tr>
+                <td>{{ hotel.name }}</td>
+                <td>{{ hotel.address }}</td>
+                <td>{{ hotel.city }}</td>
+                <td>{{ hotel.state }}</td>
+                <td>{{ hotel.zipCode }}</td>
+                <td>{{ hotel.phoneNumber }}</td>
+                <td><a href="mailto:{{ hotel.email }}">{{ hotel.email }}</a></td>
+                <td><a href="{{ hotel.website }}" target="_blank">{{ hotel.website }}</a></td>
+                <td>{{ hotel.totalRooms }}</td>
+                <td>{{ hotel.availableRooms }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No hotels available.</p>
+    {% endif %}
+</tbody>
+{% endblock %}
